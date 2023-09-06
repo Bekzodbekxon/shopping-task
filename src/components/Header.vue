@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-            <router-link to="/" class="navbar-brand ml-auto">Shopping</router-link>
+            <a @click="reload" class="navbar-brand ml-auto">Shopping</a>
 
       <button
           class="navbar-toggler"
@@ -55,6 +55,7 @@ export default {
     return {
       isNavOpen: false,
       categories: [],
+      pagination: {page: 1, limit: 20, title: ''}
     }
   },
   computed: {
@@ -74,10 +75,13 @@ export default {
   },
   methods: {
     ...mapActions(['logout']),
-    ...mapActions(['getByCategory']),
+    ...mapActions(['getByCategory','listenToProductList']),
 
     toggleNavbar() {
       this.isNavOpen = !this.isNavOpen
+    },
+    reload(){
+      this.listenToProductList(this.pagination);
     },
     getCat(category) {
       this.getByCategory(category)
