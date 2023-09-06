@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-            <a @click="reload" class="navbar-brand ml-auto">Shopping</a>
+            <a @click="reload" class="navbar-brand ml-auto" style="cursor: pointer">Shopping</a>
 
       <button
           class="navbar-toggler"
