@@ -18,7 +18,7 @@
 
       <div class="collapse navbar-collapse " id="navbarTop" :class="{show: isNavOpen}">
         <ul class="navbar-nav ml-auto mr-1" v-for="(category,index) in categories" :key="category">
-          <li v-if="index<6" style="margin: 9px" @click="getCat(category)">
+          <li v-if="index<5" style="margin: 9px" @click="getCat(category)">
             <div><a class="text-uppercase text-white" style="font-size: 14px;cursor: pointer">{{ category }}</a></div>
           </li>
         </ul>
