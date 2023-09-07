@@ -82,6 +82,7 @@ export default {
     },
     reload(){
       this.listenToProductList(this.pagination);
+      this.$router.push('/')
     },
     getCat(category) {
       this.getByCategory(category)
